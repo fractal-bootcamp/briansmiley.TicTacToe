@@ -57,6 +57,7 @@ const TicTacToe = () => {
           <GridCell
             cellValue={cellValue}
             cellSetter={() => cellSetter(cellIndex)}
+            gridIndex={cellIndex}
             key={cellIndex}
           />
         ))}
