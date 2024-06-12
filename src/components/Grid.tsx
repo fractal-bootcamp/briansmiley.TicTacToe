@@ -49,7 +49,6 @@ const TicTacToe = () => {
   const resetGame = () => {
     setGrid(emptyGrid);
   };
-  const endMessage = (grid: Board) => {};
   const boardIsEmpty = (grid: Board) => grid.every(cell => cell === "");
   return (
     <div>
