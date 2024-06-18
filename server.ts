@@ -1,15 +1,17 @@
 import express from "express";
 import cors from "cors";
-const port = 4000;
+import "dotenv/config";
+const port = process.env.PORT || 2000;
 const app = express();
 
-app.use(express.json);
 app.use(cors());
+app.use(express.json());
 
 app.get("/", (req, res) => {
+  console.log("ping");
   res.send("TicTacToe Server");
 });
 
 app.listen(port, () => {
-  console.log(`Express running on post ${port}`);
+  console.log(`Express running on port ${port}`);
 });
